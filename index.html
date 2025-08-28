@@ -20,22 +20,19 @@
     <link rel="icon" href="favicon.ico"/>
   </head>
   <style>
-    html, body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden; /* 禁止滾動 */
-        height: 100%; /* 確保頁面佔滿整個視窗 */
-    }
+      html, body {
+          margin: 0;
+          padding: 0;
+          overflow: hidden; /* 禁止滾動 */
+          height: 100%; /* 確保頁面佔滿整個視窗 */
+      }
   </style>
   <body>
     <div id="GameDiv" cc_exact_fit_screen="false">
       <div id="Cocos3dGameContainer">
-        <canvas id="GameCanvas" width="1048" height="1048" tabindex="99"></canvas>
+        <canvas id="GameCanvas" width="768" height="1280" tabindex="99"></canvas>
       </div>
     </div>
-    <p class="footer">
-      Created with <a href="https://www.cocos.com/products" title="Cocos Creator">Cocos Creator</a>
-    </p>
     <!-- Polyfills bundle. -->
 <script src="src/polyfills.bundle.js" charset="utf-8"> </script>
 
@@ -51,8 +48,8 @@
     const element = document.getElementById('GameDiv');
     let screenWidth = window.innerWidth;
     let screenHeight = window.innerHeight;
-    if(screenWidth > 1048){
-          element.style.width = 1048 + 'px'
+    if(screenWidth > 768){
+          element.style.width = 768 + 'px'
           element.style.height = screenHeight - 10 + 'px'
         }
         else{
@@ -63,8 +60,8 @@
     function adjustElementSize() {
 
       screenWidth = window.innerWidth;
-        if(screenWidth > 1048){
-          element.style.width = 1048 + 'px'
+        if(screenWidth > 768){
+          element.style.width = 768 + 'px'
           element.style.height = screenHeight - 10 + 'px'
         }
         else{
